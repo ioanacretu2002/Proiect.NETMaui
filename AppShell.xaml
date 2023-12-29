@@ -23,8 +23,8 @@
             Title="MyBookings"
             ContentTemplate="{DataTemplate local:MyBookingsPage}"/>
         <ShellContent
-            Title="MySalons"
-            ContentTemplate="{DataTemplate local:MySalonsPage}"/>
+            Title="MyNailBars"
+            ContentTemplate="{DataTemplate local:MySalonsEntryPage}"/>
 
     </TabBar>
 </Shell>

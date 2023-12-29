@@ -17,11 +17,11 @@ namespace ProiectMedii.Data
             _database = new SQLiteAsyncConnection(dbPath);
             _database.CreateTableAsync<ServiceModel>().Wait();
             _database.CreateTableAsync<NailArtistModel>().Wait();
-            //_database.CreateTableAsync<Salon>().Wait();
+            _database.CreateTableAsync<SalonModel>().Wait();
         }
 
         //Service
-        public Task<List<ServiceModel>> GetServiceModelsAsync()
+        public Task<List<ServiceModel>> GetServiceModelAsync()
         {
             return _database.Table<ServiceModel>().ToListAsync();
         }
@@ -76,6 +76,33 @@ namespace ProiectMedii.Data
             return _database.DeleteAsync(nailArtistModel);
         }
 
+        //Salon
 
+        public Task<List<SalonModel>> GetSalonModelsAsync() 
+        {
+            return _database.Table<SalonModel>().ToListAsync();
+        }
+
+        public Task<SalonModel> GetSalonModelAsync(int id)
+        {
+            return _database.Table<SalonModel>().Where(i => i.ID == id).FirstOrDefaultAsync();
+        }
+
+        public Task<int> SaveSalonModelAsync(SalonModel salonModel)
+        {
+            if (salonModel.ID != 0)
+            {
+                return _database.UpdateAsync(salonModel);
+            }
+            else
+            {
+                return _database.InsertAsync(salonModel);
+            }
+        }
+
+        public Task<int> DeleteSalonModelAsync(SalonModel salonModel)
+        {
+            return _database.DeleteAsync(salonModel);
+        }
     }
 }

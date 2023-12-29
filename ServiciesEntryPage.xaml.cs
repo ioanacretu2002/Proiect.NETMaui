@@ -10,7 +10,7 @@ public partial class ServiciesEntryPage : ContentPage
     protected override async void OnAppearing()
     {
         base.OnAppearing();
-        listView.ItemsSource = await App.Database.GetServiceModelsAsync();
+        listView.ItemsSource = await App.Database.GetServiceModelAsync();
     }
     async void OnServiceAddedClicked(object sender, EventArgs e)
     {
