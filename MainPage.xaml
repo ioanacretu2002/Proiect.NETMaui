@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProiectMedii.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image
+                Source="poza.jpg"
+                SemanticProperties.Description="Imagine unghii"
+                HeightRequest="500"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Welcome!"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="A nail salon is a beauty and relaxation oasis dedicated to the care and aesthetics of the hands. The space is often decorated in warm and inviting colors, with elegant and contemporary decor that encourages relaxation and the enjoyment of quality time. Upon entering the salon, clients are greeted by friendly and professional staff ready to provide manicure, pedicure, false nail application, gel or acrylic services, and nail art. Each workstation is equipped with state-of-the-art tools, including UV lamps for curing gels, electric polishers, and a wide range of nail polishes in various shades, from classic to trendy. The nail salon also offers a comfortable waiting area where clients can browse fashion magazines or enjoy a refreshing drink while waiting. Hygiene and cleanliness are of utmost importance, so all tools are thoroughly sterilized and disinfected after each use. Each treatment is personalized, and manicurists are dedicated to fulfilling clients' wishes, turning simple nails into true works of art. A nail salon is not only a place where beauty meets care but also a space where clients can escape everyday stress and indulge in a pleasant atmosphere."
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to our nail salon app"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
