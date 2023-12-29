@@ -6,9 +6,25 @@
     xmlns:local="clr-namespace:ProiectMedii"
     Shell.FlyoutBehavior="Disabled">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <TabBar>
+        <ShellContent
+            Title="Home"
+            ContentTemplate="{DataTemplate local:MainPage}"/>
+        <ShellContent
+            Title="About"
+            ContentTemplate="{DataTemplate local:AboutPage}"/>
+        <ShellContent
+            Title="Services"
+            ContentTemplate="{DataTemplate local:ServicesPage}"/>
+        <ShellContent
+            Title="NailArtist"
+            ContentTemplate="{DataTemplate local:NailArtistPage}"/>
+        <ShellContent
+            Title="MyBookings"
+            ContentTemplate="{DataTemplate local:MyBookingsPage}"/>
+        <ShellContent
+            Title="MySalons"
+            ContentTemplate="{DataTemplate local:MySalonsPage}"/>
 
+    </TabBar>
 </Shell>
