@@ -62,6 +62,9 @@
 	  <MauiXaml Update="MySalonsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="NailArtistEntryPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="NailArtistPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

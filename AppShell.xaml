@@ -18,7 +18,7 @@
             ContentTemplate="{DataTemplate local:ServiciesEntryPage}"/>
         <ShellContent
             Title="NailArtist"
-            ContentTemplate="{DataTemplate local:NailArtistPage}"/>
+            ContentTemplate="{DataTemplate local:NailArtistEntryPage}"/>
         <ShellContent
             Title="MyBookings"
             ContentTemplate="{DataTemplate local:MyBookingsPage}"/>
