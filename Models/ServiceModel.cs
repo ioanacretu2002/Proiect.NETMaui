@@ -1,4 +1,5 @@
 ﻿using SQLite;
+using SQLiteNetExtensions.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,5 +20,7 @@ namespace ProiectMedii.Models
         public string Duration { get; set; }
         
         public decimal Price { get; set; }
+        [OneToMany]
+        public List<BookingModel> Bookings { get; set; }
     }
 }

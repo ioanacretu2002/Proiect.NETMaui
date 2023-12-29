@@ -1,12 +1,30 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
              x:Class="ProiectMedii.MyBookingsPage"
              Title="MyBookings">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+
+    <ContentPage.Content xmlns:local="clr-namespace:ProiectMedii">
+        <StackLayout Margin="20">
+            <DatePicker Date="{Binding Date}"
+                MinimumDate="{x:Static sys:DateTime.Now}"/>
+
+            <TimePicker 
+                Time="{Binding Time}"/>
+
+            <Picker x:Name="ServicePicker" Title="Enter the type of the service"/>
+            <Picker x:Name="NailArtistPicker" Title="Enter the name of the NailArtist"/>
+            <Picker x:Name="NailBarPicker" Title="Enter the name of the NailBar"/>
+            
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Text="Save" Clicked="SaveButtonClicked" />
+                <Button Grid.Column="1" Text="Delete" Clicked="DeleteButtonClicked"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

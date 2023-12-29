@@ -18,10 +18,11 @@ namespace ProiectMedii.Data
             _database.CreateTableAsync<ServiceModel>().Wait();
             _database.CreateTableAsync<NailArtistModel>().Wait();
             _database.CreateTableAsync<SalonModel>().Wait();
+            _database.CreateTableAsync<BookingModel>().Wait();
         }
 
         //Service
-        public Task<List<ServiceModel>> GetServiceModelAsync()
+        public Task<List<ServiceModel>> GetServiceModelsAsync()
         {
             return _database.Table<ServiceModel>().ToListAsync();
         }
@@ -103,6 +104,31 @@ namespace ProiectMedii.Data
         public Task<int> DeleteSalonModelAsync(SalonModel salonModel)
         {
             return _database.DeleteAsync(salonModel);
+        }
+
+        //Booking
+        public Task<List<BookingModel>> GetBookingModelsAsync()
+        {
+            return _database.Table<BookingModel>().ToListAsync();
+        }
+        public Task<BookingModel> GetBookingModelAsync(int id)
+        {
+            return _database.Table<BookingModel>().Where(i => i.ID == id).FirstOrDefaultAsync();
+        }
+        public Task<int> SaveBookingModelAsync(BookingModel bookingModel)
+        {
+            if (bookingModel.ID != 0)
+            {
+                return _database.UpdateAsync(bookingModel);
+            }
+            else
+            {
+                return _database.InsertAsync(bookingModel);
+            }
+        }
+        public Task<int> DeleteBookingModelAsync(BookingModel bookingModel)
+        {
+            return _database.DeleteAsync(bookingModel);
         }
     }
 }
